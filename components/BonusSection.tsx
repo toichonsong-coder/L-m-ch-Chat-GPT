@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Gift, BotMessageSquare } from 'lucide-react';
 
@@ -16,6 +15,14 @@ const bonuses = [
 ]
 
 const BonusSection: React.FC = () => {
+    const handleScrollToPricing = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        const pricingSection = document.getElementById('pricing');
+        if (pricingSection) {
+          pricingSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <section className="py-20 px-4 bg-[#1e293b]">
             <div className="max-w-6xl mx-auto text-center">
@@ -39,6 +46,7 @@ const BonusSection: React.FC = () => {
 
                 <a 
                     href="#pricing"
+                    onClick={handleScrollToPricing}
                     className="inline-block text-lg font-bold text-white bg-gradient-to-r from-[#00FFFF] to-[#9D00FF] px-10 py-4 rounded-lg shadow-lg shadow-cyan-500/30 transform hover:scale-105 transition-transform duration-300"
                 >
                     GIỮ SUẤT ƯU ĐÃI VÀ BỘ QUÀ TẶNG

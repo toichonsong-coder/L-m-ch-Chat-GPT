@@ -1,12 +1,20 @@
 import React from 'react';
 
 const HeroSection: React.FC = () => {
+  const handleScrollToPricing = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative text-center px-4 py-32 md:py-40 overflow-hidden">
       {/* Background Image Layer */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center opacity-20 blur-sm"
-        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=2070&auto=format&fit=crop')` }}
+        style={{ backgroundImage: `url('/hero-background.png')` }}
       />
       
       {/* Gradient Blob Layer */}
@@ -24,6 +32,7 @@ const HeroSection: React.FC = () => {
         </p>
         <a 
           href="#pricing"
+          onClick={handleScrollToPricing}
           className="inline-block text-lg font-bold text-white bg-gradient-to-r from-[#00FFFF] to-[#9D00FF] px-10 py-4 rounded-lg shadow-lg shadow-cyan-500/30 transform hover:scale-105 transition-transform duration-300"
         >
           Đăng ký ngay để nhận ưu đãi
