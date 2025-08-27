@@ -17,7 +17,7 @@ const PricingSection: React.FC = () => {
                 </div>
                 <p className="text-yellow-400 font-semibold mb-8">(Chỉ áp dụng cho 50 học viên đăng ký đầu tiên)</p>
                 <a 
-                    href="YOUR_REGISTRATION_LINK_HERE"
+                    href="https://forms.gle/8E72UefbNkP9gz9B8"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full max-w-md inline-block text-xl font-bold text-white bg-gradient-to-r from-[#00FFFF] to-[#9D00FF] px-10 py-5 rounded-lg shadow-lg shadow-cyan-500/30 transform hover:scale-105 transition-transform duration-300"
