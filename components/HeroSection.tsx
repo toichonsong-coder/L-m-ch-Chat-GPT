@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
       {/* Background Image Layer */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center opacity-30 blur-sm"
-        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1600')` }}
+        style={{ backgroundImage: `url('/hero-background.png')` }}
       />
       
       {/* Gradient Blob Layer */}
