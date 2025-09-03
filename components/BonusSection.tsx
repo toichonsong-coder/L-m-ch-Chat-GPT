@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Gift, BotMessageSquare } from 'lucide-react';
 
 const bonuses = [
@@ -22,6 +22,40 @@ const BonusSection: React.FC = () => {
           pricingSection.scrollIntoView({ behavior: 'smooth' });
         }
     };
+
+    const [timeLeft, setTimeLeft] = useState({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+    });
+
+    useEffect(() => {
+        const targetDate = new Date();
+        targetDate.setDate(targetDate.getDate() + 3);
+        targetDate.setHours(23, 59, 59, 999);
+
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate.getTime() - now;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+            } else {
+                setTimeLeft({
+                    days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+                    hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+                    minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+                    seconds: Math.floor((distance % (1000 * 60)) / 1000),
+                });
+            }
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+    
+    const format = (num: number) => num.toString().padStart(2, '0');
 
     return (
         <section className="py-20 px-4 bg-[#1e293b]">
@@ -51,6 +85,28 @@ const BonusSection: React.FC = () => {
                 >
                     GIỮ SUẤT ƯU ĐÃI VÀ BỘ QUÀ TẶNG
                 </a>
+
+                <div className="mt-12">
+                    <h4 className="text-xl font-bold text-gray-200 mb-4">Ưu đãi đặc biệt sẽ kết thúc sau</h4>
+                    <div className="flex justify-center items-center space-x-2 md:space-x-4 max-w-md mx-auto">
+                        <div className="text-center bg-[#0f172a] p-4 rounded-lg w-1/4 border border-cyan-500/20">
+                            <div className="text-4xl font-bold gradient-text">{format(timeLeft.days)}</div>
+                            <div className="text-sm text-gray-400 mt-1">Ngày</div>
+                        </div>
+                        <div className="text-center bg-[#0f172a] p-4 rounded-lg w-1/4 border border-cyan-500/20">
+                            <div className="text-4xl font-bold gradient-text">{format(timeLeft.hours)}</div>
+                            <div className="text-sm text-gray-400 mt-1">Giờ</div>
+                        </div>
+                        <div className="text-center bg-[#0f172a] p-4 rounded-lg w-1/4 border border-cyan-500/20">
+                            <div className="text-4xl font-bold gradient-text">{format(timeLeft.minutes)}</div>
+                            <div className="text-sm text-gray-400 mt-1">Phút</div>
+                        </div>
+                        <div className="text-center bg-[#0f172a] p-4 rounded-lg w-1/4 border border-cyan-500/20">
+                            <div className="text-4xl font-bold gradient-text">{format(timeLeft.seconds)}</div>
+                            <div className="text-sm text-gray-400 mt-1">Giây</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );

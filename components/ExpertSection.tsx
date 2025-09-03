@@ -2,15 +2,24 @@ import React from 'react';
 import { Gift } from 'lucide-react';
 
 const ExpertSection: React.FC = () => {
+    const handleScrollToPricing = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        const pricingSection = document.getElementById('pricing');
+        if (pricingSection) {
+          pricingSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <section className="py-20 px-4 bg-[#0f172a]">
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                 <div className="flex justify-center">
-                    <img 
-                        src="/expert-avatar.png" 
-                        alt="Chuyên gia Phạm Anh Thơ"
-                        className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-[#9D00FF] shadow-2xl shadow-purple-500/30"
-                    />
+                    <div className="rounded-full w-64 h-64 md:w-80 md:h-80 border-4 border-[#9D00FF] shadow-2xl shadow-purple-500/30 bg-[#1e293b] flex items-center justify-center">
+                        {/* Placeholder for expert avatar */}
+                        <svg className="w-24 h-24 text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                        </svg>
+                    </div>
                 </div>
                 <div className="text-center md:text-left">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">Đồng hành cùng chuyên gia Phạm Anh Thơ</h2>
@@ -19,9 +28,8 @@ const ExpertSection: React.FC = () => {
                     </p>
                     <div className="mt-8">
                         <a 
-                          href="https://ductuenam.notion.site/AI-Landingpage-Mastery-2593dd5c7b3680068039f6733c057028"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href="#pricing"
+                          onClick={handleScrollToPricing}
                           className="inline-flex items-center text-lg font-bold text-white bg-gradient-to-r from-[#00FFFF] to-[#9D00FF] px-8 py-4 rounded-lg shadow-lg shadow-cyan-500/30 transform hover:scale-105 transition-transform duration-300"
                         >
                           <Gift className="mr-3 h-6 w-6" />

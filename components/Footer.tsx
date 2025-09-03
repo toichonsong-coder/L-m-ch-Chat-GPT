@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-2">Chuyên gia Phạm Anh Thơ</h3>
                 <p className="mb-4">Email: toichonsong@gmail.com</p>
                 <div className="flex justify-center items-center space-x-4 mb-8">
-                    <a href="https://zalo.me/0987654321" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                    <a href="https://zalo.me/g/pfzlfr181" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                         <ZaloIcon className="w-8 h-8" />
                     </a>
                 </div>
