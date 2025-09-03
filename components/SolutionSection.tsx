@@ -31,19 +31,6 @@ const SolutionSection: React.FC = () => {
                 
                 <h3 className="text-2xl md:text-3xl font-bold mb-12">Sau khóa học, bạn sẽ dễ dàng:</h3>
 
-                <div className="max-w-4xl mx-auto mb-16 rounded-lg overflow-hidden border-2 border-[#9D00FF]/50 shadow-2xl shadow-purple-500/20">
-                    <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
-                        <iframe
-                            src="https://www.youtube.com/embed/LqZ2yRoSoOM"
-                            title="Video giới thiệu khóa học"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen
-                            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                        ></iframe>
-                    </div>
-                </div>
-
                 <div className="grid md:grid-cols-3 gap-8 text-left">
                     {benefits.map((benefit, index) => (
                         <div key={index} className="flex items-start space-x-4 p-6 rounded-lg bg-[#0f172a] border border-gray-700/50">
