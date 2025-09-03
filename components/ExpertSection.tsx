@@ -14,11 +14,12 @@ const ExpertSection: React.FC = () => {
         <section className="py-20 px-4 bg-[#0f172a]">
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                 <div className="flex justify-center">
-                    <div className="rounded-full w-64 h-64 md:w-80 md:h-80 border-4 border-[#9D00FF] shadow-2xl shadow-purple-500/30 bg-[#1e293b] flex items-center justify-center">
-                        {/* Placeholder for expert avatar */}
-                        <svg className="w-24 h-24 text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                        </svg>
+                    <div className="rounded-full w-64 h-64 md:w-80 md:h-80 border-4 border-[#9D00FF] shadow-2xl shadow-purple-500/30 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1557862921-37829c790f19?auto=format&fit=crop&w=800&q=80" 
+                            alt="Chuyên gia Phạm Anh Thơ" 
+                            className="w-full h-full object-cover"
+                        />
                     </div>
                 </div>
                 <div className="text-center md:text-left">
