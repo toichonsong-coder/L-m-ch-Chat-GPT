@@ -11,10 +11,10 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="relative text-center px-4 py-32 md:py-40 overflow-hidden">
-      {/* Background Image Layer */}
+      {/* Background Image Layer - Replace the URL with your own image */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center opacity-30 blur-sm"
-        style={{ backgroundImage: `url('/hero-background.png')` }}
+        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1920')` }}
       />
       
       {/* Gradient Blob Layer */}

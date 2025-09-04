@@ -16,8 +16,8 @@ const ExpertSection: React.FC = () => {
                 <div className="flex justify-center">
                     <div className="rounded-xl w-64 md:w-80 border-4 border-[#9D00FF] shadow-2xl shadow-purple-500/30 overflow-hidden">
                         <img 
-                            src="/chuyengia-pham-anh-tho.png" 
-                            alt="Chuyên gia Phạm Anh Thơ" 
+                            src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=800" 
+                            alt="Hình ảnh minh họa công nghệ AI và mạng nơ-ron" 
                             className="w-full h-auto object-cover"
                         />
                     </div>
