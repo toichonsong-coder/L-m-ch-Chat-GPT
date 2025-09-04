@@ -14,11 +14,11 @@ const ExpertSection: React.FC = () => {
         <section className="py-20 px-4 bg-[#0f172a]">
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                 <div className="flex justify-center">
-                    <div className="rounded-full w-64 h-64 md:w-80 md:h-80 border-4 border-[#9D00FF] shadow-2xl shadow-purple-500/30 overflow-hidden">
+                    <div className="rounded-xl w-64 md:w-80 border-4 border-[#9D00FF] shadow-2xl shadow-purple-500/30 overflow-hidden">
                         <img 
                             src="/chuyengia-pham-anh-tho.png" 
                             alt="Chuyên gia Phạm Anh Thơ" 
-                            className="w-full h-full object-cover"
+                            className="w-full h-auto object-cover"
                         />
                     </div>
                 </div>
